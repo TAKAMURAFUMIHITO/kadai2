@@ -13,6 +13,7 @@ class BooksController < ApplicationController
     
     if @book.save
       redirect_to book_path(@book.id)
+      flash[:notice] = "Book was successfully created."
     else
       render :index
     end
@@ -31,6 +32,7 @@ class BooksController < ApplicationController
     
     if @book.update(book_params)
       redirect_to book_path(@book.id)
+      flash[:notice] = "Book was successfully updated."
     else
       render :edit
     end
