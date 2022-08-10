@@ -10,7 +10,7 @@
 
   <span><%= link_to 'Show', book_path(book.id) %></span>
   <span><%= link_to 'Edit', edit_book_path(book.id) %></span>
-  <span><%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></span>
+  <span><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></span>
 
 <% end %>
 
